@@ -1,0 +1,6 @@
+# http://git-scm.com/docs/gitignore
+
+# For collaboration’s sake, it’s my preference to use a local .gitignore.
+# For example, see https://github.com/mhulse/gh-boiler
+
+.DS_Store
