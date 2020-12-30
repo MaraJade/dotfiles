@@ -89,7 +89,7 @@ alias tolowercase="pbpaste | tr "[:upper:]" "[:lower:]" | pbcopy"
 alias touppercase="pbpaste | tr "[:lower:]" "[:upper:]" | pbcopy"
 
 # Only show dot files:
-alias lsh="ls -ld .??*"
+alias lsh="ls -ad .??*"
 
 alias restartdock="killall -KILL Dock"
 
@@ -128,7 +128,11 @@ alias go="open . && atom ."
 # Common ssh commands
 alias onid="ssh goossenm@shell.onid.oregonstate.edu"
 alias flip="ssh goossenm@flip1.engr.oregonstate.edu"
-alias s2="ssh -p 6345 root@10.1.10.109"
+alias stonewall="ssh marajade@fractal.stonewalljones.us -p 56322"
+alias websites="ssh twobitra@twobitranch.net"
 
 # Fuck
 eval "$(thefuck --alias fuck)"
+
+# Vim in bash
+alias :q="exec <&-"

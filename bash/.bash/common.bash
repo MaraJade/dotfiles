@@ -46,5 +46,8 @@ shopt -s checkwinsize
 shopt -s globstar
 
 # Auto add ssh keys
-keychain id_rsa_bitbucket id_rsa_github
+keychain id_rsa_github
 . ~/.keychain/`uname -n`-sh
+
+# Put tldr in path
+export PATH=~/bin:$PATH
