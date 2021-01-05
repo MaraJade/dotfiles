@@ -99,7 +99,7 @@ alias iossimulator="(cd /Applications/Xcode.app/Contents/Developer/Platforms/iPh
 # Default Python:
 alias python=python3
 # Default pip:
-alias pip=pip3
+#alias pip=pip3
 
 # XAMPP shortcuts:
 alias xampp="sudo /Applications/XAMPP/xamppfiles/xampp restart"
@@ -128,11 +128,15 @@ alias go="open . && atom ."
 # Common ssh commands
 alias onid="ssh goossenm@shell.onid.oregonstate.edu"
 alias flip="ssh goossenm@flip1.engr.oregonstate.edu"
-alias stonewall="ssh marajade@fractal.stonewalljones.us -p 56322"
+#alias stonewall="ssh marajade@fractal.stonewalljones.us -p 56322"
 alias websites="ssh twobitra@twobitranch.net"
+alias bot="ssh -vvv -i ~/.ssh/id_rsa_jnbot.pem ec2-user@ec2-54-153-39-73.us-west-1.compute.amazonaws.com"
 
 # Fuck
 eval "$(thefuck --alias fuck)"
 
 # Vim in bash
 alias :q="exec <&-"
+
+# Bootcamp Docker
+alias bootcamp="docker-compose up -d; docker-compose run -p 8080:8080 dobc bash"
