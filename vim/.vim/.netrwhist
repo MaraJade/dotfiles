@@ -1,4 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/home/marajade/projects/Laravel5-Vagrant/vagrant'
-let g:netrw_dirhist_2='/home/marajade/projects/dotfizzles/.git'
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/marajade/.vim'
+let g:netrw_dirhist_3='/home/marajade/projects/MaraJade.github.io/.git'
+let g:netrw_dirhist_2='/home/marajade/projects/MaraJade.github.io/_data/index'
+let g:netrw_dirhist_1='/home/marajade/projects/MaraJade.github.io/static/css'

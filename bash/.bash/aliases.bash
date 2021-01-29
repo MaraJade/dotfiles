@@ -97,7 +97,7 @@ alias restartdock="killall -KILL Dock"
 alias iossimulator="(cd /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/ && open -a iPhone\ Simulator.app)"
 
 # Default Python:
-alias python=python3
+#alias python=python3
 # Default pip:
 #alias pip=pip3
 
@@ -126,11 +126,9 @@ alias qlf='qlmanage -p "$@" >& /dev/null'
 alias go="open . && atom ."
 
 # Common ssh commands
-alias onid="ssh goossenm@shell.onid.oregonstate.edu"
-alias flip="ssh goossenm@flip1.engr.oregonstate.edu"
-#alias stonewall="ssh marajade@fractal.stonewalljones.us -p 56322"
 alias websites="ssh twobitra@twobitranch.net"
 alias bot="ssh -vvv -i ~/.ssh/id_rsa_jnbot.pem ec2-user@ec2-54-153-39-73.us-west-1.compute.amazonaws.com"
+alias pi="ssh -i ~/.ssh/id_ed25519_pi pi@10.0.0.180"
 
 # Fuck
 eval "$(thefuck --alias fuck)"
@@ -140,3 +138,8 @@ alias :q="exec <&-"
 
 # Bootcamp Docker
 alias bootcamp="docker-compose up -d; docker-compose run -p 8080:8080 dobc bash"
+
+# Jekyll Docker
+alias jbuild="docker run --name jekyll --rm --volume=\"$PWD:/srv/jekyll\" -it jekyll/jekyll:$JEKYLL_VERSION jekyll build --trace"
+alias jserve="docker run --name jekyll --rm -dp 4000:4000 --volume=\"$PWD:/srv/jekyll\" -it jekyll/jekyll:$JEKYLL_VERSION jekyll serve --watch --drafts"
+alias jstop="docker stop jekyll"

@@ -1,2 +1,2 @@
 #!/bin/sh
-feh  --bg-scale '/home/marajade/pictures/falcon9_landing.jpg' 
+feh --no-fehbg --bg-scale '/home/marajade/pictures/falcon9_landing.jpg' 

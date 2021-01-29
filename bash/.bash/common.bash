@@ -52,7 +52,7 @@ keychain id_rsa_github
 . ~/.keychain/`uname -n`-sh
 
 # Put Android studio in path
-export PATH=~/projects/android/android-studio/bin:$PATH
+#export PATH=~/projects/android/android-studio/bin:$PATH
 
 # Put tldr in path
 export PATH=~/bin:$PATH
@@ -70,3 +70,6 @@ export PATH=~/local/bin:$PATH
 export PATH="$PATH:$HOME/.rvm/bin"
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# Jekyll
+export JEKYLL_VERSION=4.2.0

@@ -162,13 +162,13 @@ bindsym XF86AudioRaiseVolume exec /usr/bin/pactl set-sink-volume 0 -- '+5%'
 bindsym XF86AudioMute exec /usr/bin/pactl set-sink-volume 0 0
 
 # Turn off the touchpad
-exec synclient TouchpadOff=1
+exec xinput disable ETPS/2\ Elantech\ Touchpad
 
 # Set background
 exec --no-startup-id feh --bg-scale /home/marajade/pictures/falcon_landing.jpg
 
 # Set applications to certain workspaces
-assign [class="discord"] 1
+assign [class="Discord"] 1
 assign [class="Firefox"] 2
 assign [class="Remember The Milk"] 9
 assign [class= "Gnome-Control-Center"] 10
