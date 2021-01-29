@@ -36,3 +36,5 @@ firefox/.mozilla/firefox/main.default/weave/
 firefox/.mozilla/firefox/main.default/webappsstore.sqlite
 firefox/.mozilla/firefox/main.default/webappsstore.sqlite-wal
 firefox/.mozilla/firefox/main.default/xulstore.json
+firefox/.mozilla/firefox/main.default/saved-telemetry-pings/
+firefox/.mozilla/firefox/main.default/sessionstore.jsonlz4
