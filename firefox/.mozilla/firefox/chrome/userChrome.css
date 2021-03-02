@@ -1,0 +1,18 @@
+/* Hide horizontal tabs at the top of the window */
+
+#TabsToolbar {
+  visibility: collapse !important;
+}
+
+/* Hide the "Tree Style Tab" header at the top of the sidebar
+ * For only Tree Style Tab sidebar */
+
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
+  display: none;
+}
+
+/* Reduce minimum width of the sidebar */
+
+#sidebar {
+  min-width: 100px !important;
+}
