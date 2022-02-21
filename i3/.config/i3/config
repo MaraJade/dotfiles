@@ -188,4 +188,8 @@ exec rememberthemilk
 # Firefox
 exec firefox 
 # Pithos
-exec pithos
+exec flatpak run io.github.Pithos
+# Talking clock
+#exec /home/marajade/projects/talking-clock/source/talking-clock -f 15
+# Arrange screens
+exec autorandr --change

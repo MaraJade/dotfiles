@@ -14,6 +14,9 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
+# Always use apt
+alias apt-get="apt"
+
 # Color grep:
 alias grep="grep --color=auto"
 
@@ -79,7 +82,7 @@ alias openPorts="sudo lsof -i | grep LISTEN"
 alias showBlocked="sudo ipfw list"
 
 # Removes a bunch of crap from your finder:
-alias cleanup="find . -name '*.DS_Store' -type f -ls -delete && find . -name 'Thumbs.db' -type f -ls -delete"
+#alias cleanup="find . -name '*.DS_Store' -type f -ls -delete && find . -name 'Thumbs.db' -type f -ls -delete"
 
 # Weather from my current location:
 alias weather="curl -s 'http://rss.accuweather.com/rss/liveweather_rss.asp?imperial=1&locCode=en|us|springdfield-or|97477' | sed -n '/Currently:/ s/.*: \(.*\): \([0-9]*\)\([CF]\).*/\2°\3, \1/p'"
@@ -91,10 +94,10 @@ alias touppercase="pbpaste | tr "[:lower:]" "[:upper:]" | pbcopy"
 # Only show dot files:
 alias lsh="ls -ad .??*"
 
-alias restartdock="killall -KILL Dock"
+#alias restartdock="killall -KILL Dock"
 
 # Opens up the IOS Simulator without launching xcode:
-alias iossimulator="(cd /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/ && open -a iPhone\ Simulator.app)"
+#alias iossimulator="(cd /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/ && open -a iPhone\ Simulator.app)"
 
 # Default Python:
 #alias python=python3
@@ -143,3 +146,15 @@ alias bootcamp="docker-compose up -d; docker-compose run -p 8080:8080 dobc bash"
 alias jbuild="docker run --name jekyll --rm --volume=\"$PWD:/srv/jekyll\" -it jekyll/jekyll:$JEKYLL_VERSION jekyll build --trace"
 alias jserve="docker run --name jekyll --rm -dp 4000:4000 --volume=\"$PWD:/srv/jekyll\" -it jekyll/jekyll:$JEKYLL_VERSION jekyll serve --watch --drafts"
 alias jstop="docker stop jekyll"
+
+# JustNoBot Docker
+alias bbuild="docker build . -t marajade2/justnobot_image" 
+alias testbuild="docker build . --target tester -t testbot_image"
+alias bnetwork="docker run --rm --name botnetwork -d --network justnobot --network-alias postgresql -v justnobot-postgresql:/var/lib/postgresql/data -e POSTGRES_PASSWORD=secret -e POSTGRES_DB=justno postgres"
+alias testnetwork="docker run --rm --name testnetwork -d --network testbot --network-alias postgresql -v justnobot-postgresql:/var/lib/postgresql/data -e POSTGRES_PASSWORD=secret -e POSTGRES_DB=test_bot postgres"
+alias bserve="docker run --rm --name justnobot -v justnodb:/var/lib/postgresql/data --network justnobot justnobot_image"
+alias btest="docker run --rm --name testbot -v justnodb:/var/lib/postgresql/data --network testbot testbot_image"
+alias bstop="docker stop justnobot"
+
+# C++ compiling
+alias cg++="g++ -Wall -Weffc++ -Wextra -Wsign-conversion -Werror -pedantic-errors -std=c++17"
