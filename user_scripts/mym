@@ -1,0 +1,5 @@
+#!/bin/bash
+#cd /home/marajade/games
+cd /home/marajade/.mineyourmind/launcher
+java -jar MyM-Launcher.jar
+#java -jar 1612144328754.jar
