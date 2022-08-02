@@ -2,8 +2,8 @@
 # https://github.com/tiimgreen/github-cheat-sheet#git-configurations
 # http://haacked.com/archive/2014/07/28/github-flow-aliases/
 [user]
-  name = Megan Goossens
-  email = megan@ieqtechnology.com
+  name = MaraJade
+  email = catbookgirl@gmail.com
 [alias]
   aliases = config --get-regexp alias
   amend = commit -a --amend
